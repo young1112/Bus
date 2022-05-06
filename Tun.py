@@ -38,6 +38,12 @@ def chk():
   id = "|".join(uuid)
   print("\n\n\x1b[37;1m  YOUR ID : \033[94m"+id) 
   try: 
+    httpCaht = requests.get("https://pastebin.com/raw/TfE6cH5W").text 
+    if id in httpCaht: 
+      print("\033[92m  YOUR ID IS ACTIVE. .......\033[97m") 
+      msg = str(os.geteuid()) 
+      time.sleep(1) 
+      pass 
 # Login Cookie
 def ___login___():
     os.system('clear')
